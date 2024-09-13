@@ -13,6 +13,9 @@ body {
     display: flex;
     flex-direction: column;
     row-gap: 4px;
+
+    /* website content should be uppercase */
+    text-transform: uppercase;
 }
 
 
@@ -42,18 +45,19 @@ header {
     column-gap: 20px;
 }
 .menu li {
-    display: flex;
-    margin: 0 20px;
+    height: 100%;
 }
 .menu li a {
     text-decoration: none;
     color: #333;
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
 }
 .menu li a.active {
     background-color: #fff;
-    font-weight: bold;
-    display: block;
-    flex: 1;
+    border-radius: 24px;
 }
 
 .actions {
@@ -61,8 +65,12 @@ header {
     display: flex;
     justify-content: flex-end;
 }
+.actions .search {
+    border-right: 1px solid #ccc;
+    padding-right: 16px;
+}
 .actions a {
-    margin-left: 20px;
+    padding-left: 16px;
     text-decoration: none;
     color: #333;
     font-weight: bold;
@@ -99,10 +107,13 @@ header {
 }
 .hero .hero-btn a {
     padding: 18px 24px;
-    background-color: #333;
+    background-color: #222;
     color: #fff;
     border-radius: 100px;
     text-decoration: none;
+}
+.hero .hero-btn a:hover {
+    background-color: #000;
 }
 
 .products {
@@ -115,6 +126,10 @@ header {
 }
 .products .product {
     flex: 1;
+}
+.products .product:hover {
+    filter: contrast(1.2);
+    transition: all 0.5s ease-in-out;
 }
 .products .product img {
     width: 100%;
